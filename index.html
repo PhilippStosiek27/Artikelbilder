@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bilderliste</title>
+  <style>
+    body{font-family:system-ui,Segoe UI,Roboto,Arial,sans-serif;margin:24px}
+    h1{margin:0 0 16px}
+    .hint{margin:8px 0 16px;color:#444}
+    input[type="search"]{padding:8px 10px;width:100%;max-width:420px;border:1px solid #ccc;border-radius:8px}
+    table{border-collapse:collapse;width:100%;margin-top:12px}
+    th,td{border:1px solid #e5e5e5;padding:8px;vertical-align:top}
+    th{background:#f7f7f7;text-align:left}
+    img{max-height:80px;display:block}
+    a{word-break:break-all}
+    tfoot td{border:none;padding-top:12px}
+    .muted{color:#666;font-size:12px}
+  </style>
+</head>
+<body>
+  <h1>Bilderliste</h1>
+  <div class="hint">Suche nach Dateinamen (client-side, keine Re-Loads):</div>
+  <input id="search" type="search" placeholder="z.B. artikel_12345.jpg" />
+  <table id="tbl" aria-describedby="table of images">
+    <thead>
+      <tr><th style="width:30%">Dateiname</th><th style="width:45%">Link</th><th style="width:25%">Vorschau</th></tr>
+    </thead>
+    <tbody></tbody>
+    <tfoot>
+      <tr><td colspan="3" class="muted" id="count"></td></tr>
+    </tfoot>
+  </table>
+  <script src="app.js" defer></script>
+</body>
+</html>
